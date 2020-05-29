@@ -14,9 +14,13 @@ ul {
     padding: 0px;
 }
 
-.fa-archive {
+.fa-archive.main {
     float: right;
     padding-left: 20px;
+}
+
+.fa-archive.item {
+
 }
 
 .fa-plus {
@@ -68,7 +72,7 @@ input {
 
 input:focus {
     background-color: #fff;
-    border: 3px splid #2980b9;
+    border: 3px splid #63b7af;
 }
 
 #container {
@@ -81,9 +85,4 @@ input:focus {
 .completed {
     color: gray;
     text-decoration: line-through;
-}
-
-#archive {
-    background-color: #fff;
-    color: #63b7af;
 }

@@ -16,16 +16,6 @@ $(".fa-archive").click(function() {
     });
 });
 
-/**
- * items.forEach((item) => {
-    if (item.style.display === "none") {
-        item.style.display = "block";
-    } else {
-        item.style.display = "none";
-    }
-});
- */
-
 // Click on X to delete item
 $("ul").on("click", "span", function(event){
     $(this).parent().fadeOut(500,function(){
