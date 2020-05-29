@@ -3,6 +3,29 @@ $("ul").on("click", "li", function(){
     $(this).toggleClass("completed");   
 });
 
+// Click on file cabinet to archive (hide) all items
+$(".fa-archive").click(function() {
+    var items = document.querySelectorAll("li");
+
+    items.forEach((item) => {
+        if (item.style.display === "none") {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+});
+
+/**
+ * items.forEach((item) => {
+    if (item.style.display === "none") {
+        item.style.display = "block";
+    } else {
+        item.style.display = "none";
+    }
+});
+ */
+
 // Click on X to delete item
 $("ul").on("click", "span", function(event){
     $(this).parent().fadeOut(500,function(){

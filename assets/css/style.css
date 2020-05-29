@@ -14,6 +14,11 @@ ul {
     padding: 0px;
 }
 
+.fa-archive {
+    float: right;
+    padding-left: 20px;
+}
+
 .fa-plus {
     float: right;
 }
@@ -76,4 +81,9 @@ input:focus {
 .completed {
     color: gray;
     text-decoration: line-through;
+}
+
+#archive {
+    background-color: #fff;
+    color: #63b7af;
 }
