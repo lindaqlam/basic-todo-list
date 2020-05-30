@@ -3,20 +3,16 @@ $("ul").on("click", "li", function(){
     $(this).toggleClass("completed");   
 });
 
-// Click on file cabinet to archive (hide) all items
+// Click on file cabinet to unarchive (unhide) all items
 $(".fa-archive").click(function() {
     var items = document.querySelectorAll("li");
 
     items.forEach((item) => {
-        if (item.style.display === "none") {
-            item.style.display = "block";
-        } else {
-            item.style.display = "none";
-        }
+        item.style.display = "block";
     });
 });
 
-// Click on X to delete item
+// Click on trash icon to delete item
 $("ul").on("click", "span", function(event){
     $(this).parent().fadeOut(500,function(){
         $(this).remove();
@@ -28,10 +24,29 @@ $("input[type='text']").keypress(function(event){
     if(event.which === 13){
         var todoText = $(this).val();
         $(this).val("");
-        $("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
+        $("ul").append("<li draggable=\"true\" ondragstart=\"drag(event)\"><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
     }
 });
 
 $(".fa-plus").click(function() {
     $("input[type='text']").fadeToggle();
 });
+
+/* Drag and drop functionality */
+
+var temp = {};
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target);
+    temp = ev.target;
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    temp.style.display = "none";
+}
+

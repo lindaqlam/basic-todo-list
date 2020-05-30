@@ -19,10 +19,6 @@ ul {
     padding-left: 20px;
 }
 
-.fa-archive.item {
-
-}
-
 .fa-plus {
     float: right;
 }
@@ -85,4 +81,8 @@ input:focus {
 .completed {
     color: gray;
     text-decoration: line-through;
+}
+
+#archive {
+    display: inline;
 }

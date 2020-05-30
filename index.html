@@ -11,17 +11,19 @@
 
     <body>
         <div id="container">
-            <h1>Todo List </i><i class="fa fa-archive main"></i> <i class="fa fa-plus"></i></h1>
+            <h1>Todo List <div id="archive" ondrop="drop(event)" ondragover="allowDrop(event)"><i class="fa fa-archive main"></i></div>
+                <i class="fa fa-plus"></i></h1>
             <input type="text" placeholder="Add a new item"></input>
 
 
+
             <ul>
-                <li><span><i class="fa fa-trash"></i></span> Enjoy morning matcha</li>
-                <li><span><i class="fa fa-trash"></i></span> Meditate</li>
-                <li><span><i class="fa fa-trash"></i></span> Check email</li>
-                <li><span><i class="fa fa-trash"></i></span> Write some code</li>
-                <li><span><i class="fa fa-trash"></i></span> Exercise</li>
-                <li><span><i class="fa fa-trash"></i></span> Finish book</li>
+                <li draggable="true" ondragstart="drag(event)"><span><i class="fa fa-trash"></i></span> Enjoy morning matcha</li>
+                <li draggable="true" ondragstart="drag(event)"><span><i class="fa fa-trash"></i></span> Meditate</li>
+                <li draggable="true" ondragstart="drag(event)"><span><i class="fa fa-trash"></i></span> Check email</li>
+                <li draggable="true" ondragstart="drag(event)"><span><i class="fa fa-trash"></i></span> Write some code</li>
+                <li draggable="true" ondragstart="drag(event)"><span><i class="fa fa-trash"></i></span> Exercise</li>
+                <li draggable="true" ondragstart="drag(event)"><span><i class="fa fa-trash"></i></span> Finish book</li>
             </ul>
             
         </div>
