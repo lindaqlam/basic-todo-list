@@ -1,4 +1,4 @@
-# basic-todo-list
+# Basic Todo List
 
 A short-term todo list application with four simple features: 1) adding an item, 2) checking off an item, 3) removing an item, and 4) archiving an item for later. 
 
